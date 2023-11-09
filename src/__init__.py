@@ -1,7 +1,7 @@
 from flask import Flask, g
 import mysql.connector
 
-from src.routes import auth_bp, customer_bp, vehicle_bp, booking_bp
+from src.routes import auth_bp
 
 
 def create_app():
@@ -35,7 +35,7 @@ def create_app():
                 cursor.close()
 
     app.register_blueprint(auth_bp)
-    app.register_blueprint(customer_bp)
-    app.register_blueprint(vehicle_bp)
-    app.register_blueprint(booking_bp)
+    # app.register_blueprint(customer_bp)
+    # app.register_blueprint(vehicle_bp)
+    # app.register_blueprint(booking_bp)
     return app
