@@ -1,0 +1,35 @@
+#version: "3.9"
+#
+#services:
+#  mysql:
+#    image: mysql:8.0
+#    command: --default-authentication-plugin=mysql_native_password
+#    container_name: mysql_db
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: car_pass_root
+#      MYSQL_DATABASE: car_database
+#      MYSQL_USER: car_user
+#      MYSQL_PASSWORD: car_pass
+#    volumes:
+#      - ./mysql-data:/var/lib/mysql
+#    ports:
+#      - "3306:3306"
+
+version: '3.8'
+
+services:
+  db:
+    container_name: mysql-db
+    image: mysql:8.0
+#    restart: always
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=car_pass_root
+      - MYSQL_USER=car_user
+      - MYSQL_PASSWORD=car_user
+      - MYSQL_DATABASE=car-database
+    ports:
+      - "3306:3306"
