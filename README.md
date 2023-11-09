@@ -15,7 +15,7 @@ reports for daily bookings.
 
 ## Installation
 
-1. Clone the repository from GitHub: `git clone https://github.com/your-username/car-hire-management.git`
+1. Clone the repository from GitHub: `git clone https://github.com/aahmedsamy/car-hire-management.git`
 2. Create a MySQL database and update the database connection settings in the application.
 3. Install required Python packages: `pip install -r requirements.txt`
 
